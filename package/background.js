@@ -14,7 +14,7 @@ const matchGetUrl = url => {
     ? ''
     : match[2] || '';
   return {
-    redirectUrl: match[1] + '/feed/subscriptions' + queryString + (match[3] || ''),
+    redirectUrl: match[1] + '/feed/library' + queryString + (match[3] || ''),
   };
 };
 
@@ -77,7 +77,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo) => {
     return;
   }
 
-  // If tab URL changed to home page replace it with subscriptions
+  // If tab URL changed to home page replace it with library
   const returnValue = matchGetUrl(changeInfo.url);
   if (returnValue && returnValue.redirectUrl){
     chrome.tabs.update(tabId, { url: returnValue.redirectUrl });
