@@ -1,9 +1,9 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "Replace YouTube's Home with Library",
   "short_name": "YTMySubs",
   "description": "Sets the \"Library\" page as your default homepage on YouTube by redirecting all requests at the browser level",
-  "version": "1.0.7",
+  "version": "1.1.1",
   "icons": {
     "16": "icons/16.png",
     "32": "icons/32.png",
@@ -12,29 +12,13 @@
     "128": "icons/128.png",
     "256": "icons/256.png"
   },
-  "permissions": ["declarativeNetRequest", "tabs"],
-  "host_permissions": ["*://*.youtube.com/"],
-  "action": {
-    "default_popup": "background.html",
-    "default_icon": {
-      "16": "icons/16.png",
-      "32": "icons/32.png",
-      "48": "icons/48.png",
-      "64": "icons/64.png",
-      "128": "icons/128.png",
-      "256": "icons/256.png"
-    }
-  },
-  "declarative_net_request": {
-    "rule_resources": [
-      {
-        "id": "ruleset_1",
-        "path": "rules.json",
-        "enabled": true
-      }
-    ]
-  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://*.youtube.com/",
+    "tabs"
+  ],
   "background": {
-    "service_worker": "background.js"
+    "page": "background.html"
   }
 }
