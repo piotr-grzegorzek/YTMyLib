@@ -1,0 +1,33 @@
+<html>
+<head lang="pl">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="dropdown_tutek_0.css">
+</head>
+<body>
+<div>
+<p>Zawartość HTML: zagnieżdżona lista UL<br>
+Zawartość CSS: nic</p>
+<a href="dropdown_tutek_1.html">NEXT</a>
+<hr>
+</div>
+<div id="menu">
+<ul>
+  <li><a href="">poziom I - 1</a></li>
+  <li><a href="">poziom I - 2</a></li>
+  <li><a href="">poziom I - 3</a>
+    <ul>
+      <li><a href="">poziom II - 1</a></li>
+      <li><a href="">poziom II - 2</a></li>
+      <li><a href="">poziom II - 3</a>
+        <ul>
+          <li><a href="">poziom III - 1</a></li>
+          <li><a href="">poziom III - 2</a></li>
+          <li><a href="">poziom III - 3</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+</div>
+</body>
+</html>
